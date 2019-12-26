@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+html {
+    font-family: "微软雅黑";
+    position: relative;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+    background: #f5f5f5;
+}
+
+div,
+ul,
+li,
+p {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ".";
+}
+
+
+/*所有主流浏览器都支持 :after 伪元素。*/
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right
+}
+
+#app {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    min-width: 1240px;
+    width: 65.195%;
+    margin: 0 auto;
+}
+
+.blockImport {
+    display: block !important;
+}
+
+
+/* 暂无数据 */
+
+.noData {
+    background: url('../img/noData.png') no-repeat top center;
+    padding: 200px 0 0 0;
+    background-size: 135px auto;
+    margin-top: 100px;
+}
+
+
+/* 列表页 */
+
+.ListUl li {
+    padding: 15px 15px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.ListUl li:last-child {
+    border-bottom: none;
+}
+
+.ListUl h4.title {
+    font-size: 16px;
+}
+
+.ListUl h4.title:hover {
+    text-decoration: underline;
+}
+
+.ListUl .intr {
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 5px 0;
+}
+
+.ListUl .time {
+    font-size: 12px;
+    color: #666;
+}
