@@ -208,6 +208,14 @@ body::-webkit-scrollbar-corner {
     margin: 50px 0;
 }
 
+.detailCont .ind2em {
+    text-indent: 2em;
+}
+
+.pleft-15 {
+    padding-left: 15px;
+}
+
 .imgShadow {
     position: fixed;
     top: 0;
