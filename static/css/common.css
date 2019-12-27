@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+html {
+    font-family: "微软雅黑";
+    position: relative;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+    background: #f5f5f5;
+}
+
+div,
+ul,
+li,
+p {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ".";
+}
+
+
+/*所有主流浏览器都支持 :after 伪元素。*/
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    /**/
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+body::-webkit-scrollbar-corner {
+    background: #179a16;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right
+}
+
+#app {
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.blockImport {
+    display: block !important;
+}
+
+
+/* 暂无数据 */
+
+.noData {
+    background: url('../img/noData.png') no-repeat top center;
+    padding: 200px 0 0 0;
+    background-size: 135px auto;
+    margin: 100px 0;
+}
+
+.backBtn {
+    background: url(../img/back.png) no-repeat center left;
+    background-size: 30px;
+    height: 48px;
+    line-height: 48px;
+    display: block;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+}
+
+.logo {
+    background: url(../img/logo.png) no-repeat center left;
+    background-size: auto 100%;
+    height: 48px;
+    display: block;
+    float: left;
+    width: 200px;
+}
+
+
+/* 列表页 */
+
+.ListUl li {
+    padding: 15px 15px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.ListUl li:last-child {
+    border-bottom: none;
+}
+
+.ListUl h4.title {
+    font-size: 16px;
+}
+
+.ListUl h4.title:hover {
+    text-decoration: underline;
+}
+
+.ListUl .intr {
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 5px 0;
+}
+
+.ListUl .time {
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* 详情页 */
+
+.detailCont {
+    line-height: 24px;
+    padding-bottom: 80px;
+}
+
+.detailCont h3 {
+    font-size: 20px;
+    margin: 70px 0 50px 0;
+    text-align: center;
+}
+
+.detailCont p {
+    margin: 20px 0;
+}
+
+.detailCont img {
+    vertical-align: top;
+    max-width: 48%;
+    max-height: 200px;
+    display: inline-block;
+    margin: 0 auto;
+    outline: 1px solid #999;
+}
+
+.detailCont a {
+    color: #0083d4;
+}
+
+.detailCont a:hover {
+    text-decoration: underline;
+}
+
+.detailCont p .code {
+    background: #000;
+    color: #fff;
+    padding: 3px 10px;
+    margin: 0 5px;
+}
+
+.detailCont hr {
+    margin: 50px 0;
+}
+
+.detailCont .ind2em {
+    text-indent: 2em;
+}
+
+.pleft-15 {
+    padding-left: 15px;
+}
+
+.imgShadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+    display: none;
+}
+
+.imgShadow img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.static {
+    overflow: hidden;
+}
+
+#toTop {
+    background: url(../img/top.png) no-repeat center;
+    background-size: 100%;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    position: fixed;
+    right: 10%;
+    bottom: 20%;
+    z-index: 8;
+    cursor: pointer;
+    display: none;
+}
+
+.secret {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+    z-index: 99999;
+}
+
+.secret span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
