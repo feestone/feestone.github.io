@@ -96,6 +96,15 @@ a {
     cursor: pointer;
 }
 
+.logo {
+    background: url(../img/logo.png) no-repeat center left;
+    background-size: auto 100%;
+    height: 48px;
+    display: block;
+    float: left;
+    width: 200px;
+}
+
 
 /* 列表页 */
 
@@ -156,6 +165,14 @@ a {
     outline: 1px solid #999;
 }
 
+.detailCont a {
+    color: #0083d4;
+}
+
+.detailCont a:hover {
+    text-decoration: underline;
+}
+
 .imgShadow {
     position: fixed;
     top: 0;
@@ -192,4 +209,25 @@ a {
     z-index: 8;
     cursor: pointer;
     display: none;
+}
+
+.secret {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+    z-index: 99999;
+}
+
+.secret span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
