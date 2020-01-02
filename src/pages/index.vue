@@ -34,9 +34,14 @@ export default {
       navActive: 0,
       learnSubsetList: [
         {
+          title: "HTML",
+          url: "/htmlList"
+        },
+        {
           title: "VUE",
           url: "/vueList"
-        }
+        },
+        
       ],
       lifeSubsetList: [],
       islook: false
@@ -96,24 +101,28 @@ export default {
   top: 40%;
   left: 50%;
   z-index: 99;
-  background: #000;
+   background: lightseagreen;
+  animation: none;
+  box-shadow: 0 0 15px #fff;
+  border:1px solid #fff;
   color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   font-weight: bold;
-  animation: myfirst 2s infinite ease-in-out;
+  /* animation: myfirst 2s infinite ease-in-out; */
   text-align: center;
-  line-height: 200px;
+  line-height: 150px;
   transform: translate(-50%, -50%);
   font-size: 40px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 .welcome:hover {
-  background: lightseagreen;
-  animation: none;
-  box-shadow: 0 0 20px #fff;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  box-shadow: 0 0 30px #fff;
 }
 @keyframes myfirst {
   0% {

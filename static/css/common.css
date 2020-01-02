@@ -170,10 +170,16 @@ body::-webkit-scrollbar-corner {
     padding-bottom: 80px;
 }
 
-.detailCont h3 {
+.detailCont h3:first-child {
     font-size: 20px;
     margin: 70px 0 50px 0;
     text-align: center;
+}
+
+.detailCont h1,
+.detailCont h2,
+.detailCont h3 {
+    margin: 15px 0;
 }
 
 .detailCont p {
@@ -187,6 +193,7 @@ body::-webkit-scrollbar-corner {
     display: inline-block;
     margin: 0 auto;
     outline: 1px solid #999;
+    margin: 10px 0;
 }
 
 .detailCont a {
@@ -214,6 +221,10 @@ body::-webkit-scrollbar-corner {
 
 .pleft-15 {
     padding-left: 15px;
+}
+
+.pleft-30 {
+    padding-left: 30px;
 }
 
 .imgShadow {
