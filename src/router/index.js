@@ -11,6 +11,7 @@ import lifeList from '@/pages/life/list/lifeList'
 
 import htmlList from '@/pages/learn/list/html/html-list'
 import html01 from '@/pages/learn/detail/html/html-01'
+import html02 from '@/pages/learn/detail/html/html-02'
 
 
 
@@ -61,6 +62,11 @@ export default new Router({
             path: '/htmlList/html01',
             name: 'html01',
             component: html01,
+        },
+        {
+            path: '/htmlList/html02',
+            name: 'html02',
+            component: html02,
         },
     ]
 })

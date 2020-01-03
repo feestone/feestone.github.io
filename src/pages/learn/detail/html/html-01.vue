@@ -36,16 +36,16 @@
         <img src="https://cdn.u1.huluxia.com/g3/M01/C0/0B/wKgBOV4NlCuAdEa5AAD3sAL5E9E008.jpg" />
         <h2>浏览器介绍</h2>
         <div class="pleft-15">
-            <p>常用浏览器，谷歌，IE，火狐，欧朋,Safari</p>
-            <p>浏览器内核 （作为了解）</p>
-            <div class="pleft-15">
-                <p>1、IE浏览器内核：Trident内核，也是俗称的IE内核；</p>
-                <p>2、Chrome浏览器内核：统称为Chromium内核或Chrome内核，以前是Webkit内核，现在是Blink内核；</p>
-                <p>3、火狐浏览器内核：Gecko内核，俗称Firefox内核；</p>
-                <p>4、Safari浏览器内核：Webkit内核；</p>
-                <p>5、Opera浏览器内核：最初是自己的Presto内核，后来是Webkit，现在是Blink内核；</p>
-            </div>
-            <p>代码在各个浏览器有兼容性，就是有的代码在Chrome浏览器生效，在ie可能就不生效。所以要注意代码的兼容性。</p>
+          <p>常用浏览器，谷歌，IE，火狐，欧朋,Safari</p>
+          <p>浏览器内核 （作为了解）</p>
+          <div class="pleft-15">
+            <p>1、IE浏览器内核：Trident内核，也是俗称的IE内核；</p>
+            <p>2、Chrome浏览器内核：统称为Chromium内核或Chrome内核，以前是Webkit内核，现在是Blink内核；</p>
+            <p>3、火狐浏览器内核：Gecko内核，俗称Firefox内核；</p>
+            <p>4、Safari浏览器内核：Webkit内核；</p>
+            <p>5、Opera浏览器内核：最初是自己的Presto内核，后来是Webkit，现在是Blink内核；</p>
+          </div>
+          <p>代码在各个浏览器有兼容性，就是有的代码在Chrome浏览器生效，在ie可能就不生效。所以要注意代码的兼容性。</p>
         </div>
 
         <h2>HTML标签。</h2>
@@ -156,7 +156,7 @@
           <img src="https://cdn.u1.huluxia.com/g3/M01/C0/38/wKgBOV4NqIKAQEbmAABE64koUjU438.jpg" />
         </div>
 
-        <h2>标签的属性</h2>
+        <h2 id="name">标签的属性</h2>
         <div class="pleft-15">
           <p>作用：给标签增加更多的信息。格式：在标签内，增加属性名和属性值。理论上可以增加无数的属性,中间用空格隔开。拿图片做示例：</p>
           <p>
@@ -165,7 +165,6 @@
             >&lt;img src="https://cdn.u1.huluxia.com/g3/M01/C0/39/wKgBOV4NqQyAF386AAAnJ4WLB8I449.jpg" /&gt;</span>
           </p>
           <img src="https://cdn.u1.huluxia.com/g3/M01/C0/39/wKgBOV4NqQyAF386AAAnJ4WLB8I449.jpg" />
-
           <p>src为属性名，双引号里面的src的值。属性都有固定的名称，对应不同的作用。以后还会接触到 自定义属性。</p>
         </div>
         <h2>img的更多属性。</h2>
@@ -199,6 +198,24 @@
           <p>
             <a href="http://www.baidu.com" target="_blank">新页面打开百度，target为_blank</a>
           </p>
+          <img src="https://cdn.u1.huluxia.com/g3/M01/C1/D2/wKgBOV4OpBqAejvqAAA87hg63IY929.jpg" />
+          <p>base 标签</p>
+          <p>
+            <span class="code">&lt;base target="_blank"&gt;</span>
+          </p>
+          <p>写在head里面 ， 控制本页面的a链接默认跳转方式。</p>
+          <img src="https://cdn.u1.huluxia.com/g3/M01/C1/EA/wKgBOV4OsaKAHFmRAABGUeuiCos310.jpg" />
+          <p>锚点</p>
+          <p>锚点由两部分组成：设置锚点链接、锚点。</p>
+          <p>
+            方法一：锚点链接的href 必须和锚点的id一致。
+            <span class="code">&lt;a href="#name"&gt;</span>
+            <span class="code">&lt;div id="name"&gt;</span>
+          </p>
+          <p>示例：</p>
+          <p>
+            <a href="#name">去标签的属性</a>
+          </p>
         </div>
         <h2>注释标签</h2>
         <div class="pleft-15">
@@ -206,7 +223,28 @@
           <p>注释可以让我们清楚的知道代码的作用，程序中不会执行注释的代码。注释是比较重要的，尤其是项目大，逻辑多的时候，需要写好注释。 也可以用于屏蔽无用代码。快捷键是 ctrl + / 。</p>
           <img src="https://cdn.u1.huluxia.com/g3/M01/C0/5B/wKgBOV4NuLaABt7tAABPyBb3Cyo398.jpg" />
         </div>
-
+        <h2>预格式化文本标签</h2>
+        <div class="pleft-15">
+          <p>pre标签，不常用，应该说是基本不用。作用：代码中文字怎么排版，浏览器中就怎么排版。示例：</p>
+          <p>
+            <pre>
+              春眠不觉晓，
+              处处闻啼鸟。
+              夜来风雨声，
+              花落知多少。
+            </pre>
+          </p>
+          <img src = 'https://cdn.u1.huluxia.com/g3/M01/C1/EE/wKgBOV4Os0SAIXxIAAAkvZ5n_h4424.jpg' />
+          <p>正常的话，在代码里回车，空格都是无效的。但是加了pre标签后，这些都会生效，被浏览器解析。</p>
+        </div>
+        <h2>特殊字符</h2>
+        <div class="pleft-15">
+          <p>注意特殊字符不是标签。是字符。示例：</p>
+          <p>当你想在文字中加入空格的时候，不管你加了多少的空格，浏览器上只有一个空格的位置。这时候你可以用特殊字符 & nbsp 替代空格。示例：</p>
+          <p>文字间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加空格</p>
+          <img src = 'https://cdn.u1.huluxia.com/g3/M01/C1/F4/wKgBOV4OtmKAGnjVAABrR0LrIqA373.jpg' />
+          <p>特殊字符有很多，用的时候去查就可以了。地址：<a href="https://www.jb51.net/onlineread/htmlchar.htm" target="_blank">https://www.jb51.net/onlineread/htmlchar.htm</a></p>
+        </div>
         <hr />
         <h2>路径</h2>
         <div class="pleft-15">
@@ -247,13 +285,26 @@
             <p>示例：</p>
             <img src="https://cdn.u1.huluxia.com/g3/M01/C0/6A/wKgBOV4NvqmAeajpAAAomTpgN98197.jpg" />
             <p>目录结构如上，如果要在test.html中引入000.css，可以有以下写法：</p>
-            <p>1、<span class="code">&lt;linkhref="./css/css1/000.css"/&gt; </span>(./可以省略)</p>
-            <p> 2、<span class="code">&lt;link href="/html/css/css1/000.css" /&gt;</span>(这种就是绝对路径写法。)</p>
-            <p>3、 <span class="code">&lt;link href="../html/css/css1/000.css" /&gt;</span></p>
+            <p>
+              1、
+              <span class="code">&lt;linkhref="./css/css1/000.css"/&gt;</span>(./可以省略)
+            </p>
+            <p>
+              2、
+              <span class="code">&lt;link href="/html/css/css1/000.css" /&gt;</span>(这种就是绝对路径写法。)
+            </p>
+            <p>
+              3、
+              <span class="code">&lt;link href="../html/css/css1/000.css" /&gt;</span>
+            </p>
 
             <p>还有外链的链接，写的都是绝对路径，http://开头，直接指定到某一个网站。示例：</p>
-             <p><span class="code">&lt;img src="https://cdn.u1.huluxia.com/g3/M01/C0/6A/wKgBOV4NvqmAeajpAAAomTpgN98197.jpg" /&gt;</span></p>
-             <p>这个就直接访问的https://cdn.u1.huluxia.com网站里的一张图片。</p>
+            <p>
+              <span
+                class="code"
+              >&lt;img src="https://cdn.u1.huluxia.com/g3/M01/C0/6A/wKgBOV4NvqmAeajpAAAomTpgN98197.jpg" /&gt;</span>
+            </p>
+            <p>这个就直接访问的https://cdn.u1.huluxia.com网站里的一张图片。</p>
           </div>
         </div>
       </div>
