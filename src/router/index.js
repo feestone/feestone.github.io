@@ -8,6 +8,8 @@ import vue03 from '@/pages/learn/detail/vue/vue-03'
 import vue04 from '@/pages/learn/detail/vue/vue-04'
 
 import lifeList from '@/pages/life/list/lifeList'
+import life01 from '@/pages/life/detail/life-01'
+
 
 import htmlList from '@/pages/learn/list/html/html-list'
 import html01 from '@/pages/learn/detail/html/html-01'
@@ -52,6 +54,11 @@ export default new Router({
             path: '/life/lifeList',
             name: 'lifeList',
             component: lifeList,
+        },
+        {
+            path: '/life/life01',
+            name: 'life01',
+            component: life01,
         },
         {
             path: '/htmlList',
