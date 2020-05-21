@@ -40,8 +40,7 @@ export default {
         {
           title: "VUE",
           url: "/vueList"
-        },
-        
+        }
       ],
       lifeSubsetList: [],
       islook: false
@@ -58,13 +57,14 @@ export default {
         _this.$router.push("/life/lifeList");
       }
     };
-    this.$parent.$emit('nofoot',false)
+    this.$parent.$emit("nofoot", false);
+    localStorage.removeItem('isShowGOmi');
   },
   mounted() {
-    $('.welcomePages').height(document.body.offsetHeight)
+    $(".welcomePages").height(document.body.offsetHeight);
   },
-  beforeDestroy(){
-    this.$parent.$emit('nofoot',true)
+  beforeDestroy() {
+    this.$parent.$emit("nofoot", true);
   },
   methods: {
     comeIn() {
@@ -81,7 +81,7 @@ export default {
 };
 </script>
 <style scoped>
-.footerBox{
+.footerBox {
   display: none;
 }
 .index {
@@ -101,10 +101,10 @@ export default {
   top: 40%;
   left: 50%;
   z-index: 99;
-   background: lightseagreen;
+  background: lightseagreen;
   animation: none;
   box-shadow: 0 0 15px #fff;
-  border:1px solid #fff;
+  border: 1px solid #fff;
   color: #fff;
   width: 150px;
   height: 150px;
