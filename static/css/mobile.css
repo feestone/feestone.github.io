@@ -1,0 +1,77 @@
+@media screen and (max-width:760px) {
+    body,
+    html {
+        font-size: 0.24rem;
+    }
+    .content {
+        width: 7.5rem;
+        max-width: 100%;
+    }
+    .home .nav .navList {
+        font-size: 0.24rem;
+    }
+    /* 列表页 */
+    .ListUl li {
+        padding: 0.15rem;
+    }
+    .ListUl h4.title {
+        font-size: 0.26rem;
+    }
+    .ListUl .intr {
+        font-size: 0.2rem;
+        line-height: 0.3rem;
+        margin: 0.1rem 0;
+    }
+    .ListUl .time {
+        font-size: 0.18rem;
+    }
+    /* 详情页 */
+    .detailCont {
+        line-height: 0.36rem;
+        padding: 0 0.2rem 0.8rem 0.2rem;
+        box-sizing: border-box;
+    }
+    .detailCont * {
+        word-break: break-all;
+    }
+    .detailCont h3:first-child {
+        font-size: 0.36rem;
+        margin: 0.7rem 0 0.5rem 0;
+    }
+    .detailCont h1,
+    .detailCont h2,
+    .detailCont h3 {
+        margin: 0.15rem 0;
+    }
+    .detailCont p {
+        margin: 0.2rem 0;
+    }
+    .detailCont img {
+        max-height: 2rem;
+        margin: 0.01rem 0;
+    }
+    .detailCont hr {
+        margin: 0.5rem 0;
+    }
+    .pleft-15 {
+        padding-left: 0.15rem;
+    }
+    .pleft-30 {
+        padding-left: 0.30rem;
+    }
+    #toTop {
+        height: 0.7rem;
+        width: 0.7rem;
+        right: 0.2rem;
+    }
+    .secret {
+        font-size: 0.28rem;
+    }
+    .backBtn {
+        background-size: 0.3rem;
+        height: 0.48rem;
+        line-height: 0.48rem;
+        padding-left: 0.4rem;
+        font-size: 0.2rem;
+    }
+}
