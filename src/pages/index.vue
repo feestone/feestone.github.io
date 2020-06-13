@@ -8,7 +8,7 @@
     <div class="home" :class="islook?'blockImport':''">
       <div class="content">
         <div class="blogIndex">
-          <div class="logobox">
+          <div class="logobox" @click="goLife()">
             <img src="../../static/img/logoIndex.png" alt class="indexlogo" />
           </div>
           <ul class="nav">
@@ -22,6 +22,10 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="lifeAlert" :class="{'isShow':lifeAlert}">
+      <div class="lifeShadow" @click="hideLife()"></div>
+      <input type="text" v-model="lifePass" @change="chackPass()" />
     </div>
   </div>
 </template>
@@ -43,7 +47,9 @@ export default {
         }
       ],
       lifeSubsetList: [],
-      islook: false
+      islook: false,
+      goLifeNum: 0,
+      lifeAlert: false
     };
   },
   created() {
@@ -58,7 +64,7 @@ export default {
       }
     };
     this.$parent.$emit("nofoot", false);
-    localStorage.removeItem('isShowGOmi');
+    localStorage.removeItem("isShowGOmi");
   },
   mounted() {
     $(".welcomePages").height(document.body.offsetHeight);
@@ -76,6 +82,41 @@ export default {
     },
     navTab() {
       this.navActive == 0 ? (this.navActive = 1) : (this.navActive = 0);
+    },
+    goLife() {
+      if (!this.isPc()) {
+        this.goLifeNum++;
+        if (this.goLifeNum > 10) {
+          this.lifeAlert = true;
+        }
+      }
+    },
+    isPc() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = [
+        "Android",
+        "iPhone",
+        "SymbianOS",
+        "Windows Phone",
+        "iPad",
+        "iPod"
+      ];
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    },
+    hideLife() {
+      this.lifeAlert = false;
+    },
+    chackPass() {
+      if (this.lifePass == "634946") {
+        this.$router.push("/life/lifeList");
+      }
     }
   }
 };
@@ -263,5 +304,104 @@ export default {
 }
 .noData {
   margin: 0;
+}
+.lifeAlert {
+  display: none;
+}
+.lifeShadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.lifeAlert input {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.6rem;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.lifeAlert.isShow {
+  display: block;
+  animation: lifeAlert 1s;
+}
+@keyframes lifeAlert {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 760px) {
+  .home .nav .navList {
+    font-size: 0.24rem;
+  }
+  .welcome {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 99;
+    background: lightseagreen;
+    animation: none;
+    box-shadow: 0 0 0.15rem #fff;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5rem;
+    transform: translate(-50%, -50%);
+    font-size: 0.4rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .welcome:hover {
+    width: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    box-shadow: 0 0 0.3rem #fff;
+  }
+  .logobox {
+    width: 1rem;
+    height: 1rem;
+  }
+  .logobox .indexlogo {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  .home .nav {
+    margin: 0.5rem auto 0.5rem auto;
+  }
+  .home .nav .navList {
+    margin: 0 0.2rem;
+    padding: 0.08rem 0.3rem;
+    border-radius: 6px;
+    font-size: 0.24rem;
+  }
+  .home .learnSubset,
+  .home .lifeSubset {
+    max-width: 100%;
+    padding: 0.2rem;
+    min-height: 2rem;
+  }
+  .home .learnSubset li,
+  .home .lifeSubset li {
+    margin: 0.2rem;
+  }
+  .home .learnSubset li a,
+  .home .lifeSubset li a {
+    padding: 0.08rem 0.3rem;
+  }
 }
 </style>

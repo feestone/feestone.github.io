@@ -1,85 +1,67 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/index'
-import vueList from '@/pages/learn/list/vue/vue-list'
-import vue01 from '@/pages/learn/detail/vue/vue-01'
-import vue02 from '@/pages/learn/detail/vue/vue-02'
-import vue03 from '@/pages/learn/detail/vue/vue-03'
-import vue04 from '@/pages/learn/detail/vue/vue-04'
-
-import lifeList from '@/pages/life/list/lifeList'
-import life01 from '@/pages/life/detail/life-01'
-import life02 from '@/pages/life/detail/life-02'
-
-
-import htmlList from '@/pages/learn/list/html/html-list'
-import html01 from '@/pages/learn/detail/html/html-01'
-import html02 from '@/pages/learn/detail/html/html-02'
-
-
-
 
 Vue.use(Router)
 export default new Router({
     routes: [{
             path: '/',
             name: 'Index',
-            component: Index
+            component: resolve => require(['@/pages/index'], resolve)
         },
         {
             path: '/vueList',
             name: 'vueList',
-            component: vueList,
+            component: resolve => require(['@/pages/learn/list/vue/vue-list'], resolve)
         },
         {
             path: '/vueList/vue01',
             name: 'vue01',
-            component: vue01,
+            component: resolve => require(['@/pages/learn/detail/vue/vue-01'], resolve),
         },
         {
             path: '/vueList/vue02',
             name: 'vue02',
-            component: vue02,
+            component: resolve => require(['@/pages/learn/detail/vue/vue-02'], resolve),
         },
         {
             path: '/vueList/vue03',
             name: 'vue03',
-            component: vue03,
+            component: resolve => require(['@/pages/learn/detail/vue/vue-03'], resolve),
         },
         {
             path: '/vueList/vue04',
             name: 'vue04',
-            component: vue04,
+            component: resolve => require(['@/pages/learn/detail/vue/vue-04'], resolve),
         },
         {
             path: '/life/lifeList',
             name: 'lifeList',
-            component: lifeList,
+            component: resolve => require(['@/pages/life/list/lifeList'], resolve),
         },
         {
             path: '/life/life01',
             name: 'life01',
-            component: life01,
+            component: resolve => require(['@/pages/life/detail/life-01'], resolve),
         },
         {
             path: '/life/life02',
             name: 'life02',
-            component: life02,
+            component: resolve => require(['@/pages/life/detail/life-02'], resolve),
         },
         {
             path: '/htmlList',
             name: 'htmlList',
-            component: htmlList,
+            component: resolve => require(['@/pages/learn/list/html/html-list'], resolve),
         },
         {
             path: '/htmlList/html01',
             name: 'html01',
-            component: html01,
+            component: resolve => require(['@/pages/learn/detail/html/html-01'], resolve),
         },
         {
             path: '/htmlList/html02',
             name: 'html02',
-            component: html02,
+            component: resolve => require(['@/pages/learn/detail/html/html-02'], resolve),
         },
     ]
 })
