@@ -8,6 +8,8 @@ export default new Router({
             name: 'Index',
             component: resolve => require(['@/pages/index'], resolve)
         },
+
+        // vue 内容 start
         {
             path: '/vueList',
             name: 'vueList',
@@ -33,6 +35,9 @@ export default new Router({
             name: 'vue04',
             component: resolve => require(['@/pages/learn/detail/vue/vue-04'], resolve),
         },
+        // vue 内容 end
+
+        // life 内容 start
         {
             path: '/life/lifeList',
             name: 'lifeList',
@@ -48,6 +53,9 @@ export default new Router({
             name: 'life02',
             component: resolve => require(['@/pages/life/detail/life-02'], resolve),
         },
+        // life 内容 end
+
+        // html 内容 start
         {
             path: '/htmlList',
             name: 'htmlList',
@@ -63,5 +71,20 @@ export default new Router({
             name: 'html02',
             component: resolve => require(['@/pages/learn/detail/html/html-02'], resolve),
         },
+        // html 内容 end
+
+        // JS 内容 start
+        {
+            path: '/jsList',
+            name: 'jsList',
+            component: resolve => require(['@/pages/learn/list/javascript/js-list'], resolve),
+        },
+        {
+            path: '/jsList/js01',
+            name: 'js01',
+            component: resolve => require(['@/pages/learn/detail/javascript/js-01'], resolve),
+        },
+        // JS 内容 end
+
     ]
 })

@@ -42,6 +42,10 @@ export default {
           url: "/htmlList"
         },
         {
+          title: "JS",
+          url: "/jsList"
+        },
+        {
           title: "VUE",
           url: "/vueList"
         }
