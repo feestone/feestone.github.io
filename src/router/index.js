@@ -52,6 +52,10 @@ export default new Router({
             path: '/life/life02',
             name: 'life02',
             component: resolve => require(['@/pages/life/detail/life-02'], resolve),
+        }, {
+            path: '/life/life03',
+            name: 'life03',
+            component: resolve => require(['@/pages/life/detail/life-03'], resolve),
         },
         // life 内容 end
 
